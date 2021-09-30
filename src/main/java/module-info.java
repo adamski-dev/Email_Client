@@ -1,7 +1,11 @@
-module Email_Client {
+module GetMail {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens Email_Client to javafx.fxml;
-    exports Email_Client;
+    opens GetMail to javafx.fxml;
+    exports GetMail;
+    //exports GetMail.view;
+    //opens GetMail.view to javafx.fxml;
+    exports GetMail.controller;
+    opens GetMail.controller to javafx.fxml;
 }
